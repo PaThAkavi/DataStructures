@@ -3,6 +3,8 @@
 # define CAPACITY 10
 void push(int);
 int isFull(void);
+void pop(void);
+int isEmpty(void);
 int stack[10];
 int top = -1;
 
@@ -20,6 +22,26 @@ void push(int ele){
     else{
         top ++ ;
         stack[top] = ele ;
+    }
+}
+
+void popp(){
+    if(isEmpty()){
+        printf("Underflow");
+    } 
+    else{
+        int x;
+        x = stack[top];
+        top -- ;
+    }
+}
+
+int isEmpty(){
+    if(top == -1){
+        return 1;
+    }
+    else{
+        return 0;
     }
 }
 
