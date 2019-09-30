@@ -17,7 +17,7 @@ int main(void){
 
 void push(int ele){
     if(isFull()){
-        print("Overflow");
+        printf("Overflow");
     }
     else{
         top ++ ;
