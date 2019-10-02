@@ -5,19 +5,25 @@ void push(int);
 int isFull(void);
 void pop(void);
 int isEmpty(void);
+void peek(void);
 int stack[10];
 int top = -1;
 
 int main(void){
     int *stack;
     stack = (int *)calloc(CAPACITY, sizeof(int));
-
+    push(10);
+    push(20);
+    push(30);
+    peek();
+    pop();
+    peek();
     return 0;
 }
 
 void push(int ele){
     if(isFull()){
-        printf("Overflow");
+        printf("Overflow \n");
     }
     else{
         top ++ ;
@@ -25,9 +31,9 @@ void push(int ele){
     }
 }
 
-void popp(){
+void pop(){
     if(isEmpty()){
-        printf("Underflow");
+        printf("Underflow \n");
     } 
     else{
         int x;
@@ -51,5 +57,14 @@ int isFull(){
     } 
     else{
         return 0;
+    }
+}
+
+void peek(){
+    if(isEmpty()){
+        printf("UNDERFLOW \n");
+    }
+    else{
+        printf("Top element is : %d \n", stack[top]);
     }
 }

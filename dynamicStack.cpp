@@ -8,14 +8,14 @@ void peek();
 
 class Stack{
     int totalSize;
-    int *stack;
+    int * stack;
     int top;
 
     public:
 
     Stack(int size){
         this->totalSize = size;
-        this->arr = new int[this->totalSize];
+        this->stack = new int[this->totalSize];
         this->top = -1;
     }
 
@@ -56,10 +56,13 @@ class Stack{
             cout << "Top value is : " << this->stack[top] << endl;
         }
     }
-}
+};
 
 int main(){
-    
+    Stack stk(5);
+    stk.push(10);
+    stk.push(20);
+    stk.peek();
     return 0;
 }
 
