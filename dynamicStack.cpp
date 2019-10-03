@@ -43,7 +43,7 @@ class Stack{
         }
         else{
             int x;
-            x = this->stack[top];
+            x = this->stack[this->top];
             top -= 1;
         }
     }
@@ -59,10 +59,14 @@ class Stack{
 };
 
 int main(){
-    Stack stk(5);
-    stk.push(10);
-    stk.push(20);
-    stk.peek();
+    Stack * newStack = new Stack(5);
+    newStack -> push(10);
+    newStack -> push(20);
+    newStack -> push(30);
+    newStack -> peek();   
+    newStack -> pop();
+    newStack -> peek();
+    exit(0);
     return 0;
 }
 
